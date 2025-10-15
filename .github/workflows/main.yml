@@ -1,4 +1,4 @@
-name: Deploy Templatized Data Environment
+name: Deploy Templatized Data Environment 
 
 on:
   pull_request:
