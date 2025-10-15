@@ -1,5 +1,5 @@
 -- Create the stored procedure, define its logic with Snowpark for Python, write sales to raw_pos.daily_sales_hamburg_t
-CREATE OR REPLACE PROCEDURE staging_tasty_bytes.raw_pos.process_order_headers_stream()
+CREATE OR REPLACE PROCEDURE {{env}}_tasty_bytes.raw_pos.process_order_headers_stream()
   RETURNS STRING
   LANGUAGE PYTHON
   RUNTIME_VERSION = '3.10'

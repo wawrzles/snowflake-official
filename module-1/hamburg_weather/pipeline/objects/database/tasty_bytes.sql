@@ -1,1 +1,1 @@
-CREATE OR ALTER DATABASE staging_tasty_bytes;
+CREATE OR ALTER DATABASE {{env}}_tasty_bytes;
