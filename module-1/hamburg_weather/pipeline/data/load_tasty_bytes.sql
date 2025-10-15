@@ -19,7 +19,6 @@ CREATE OR ALTER SCHEMA prod_tasty_bytes.raw_customer;
 -- create harmonized schema
 CREATE OR ALTER SCHEMA prod_tasty_bytes.harmonized;
 
-
 -- create analytics schema
 CREATE OR ALTER SCHEMA prod_tasty_bytes.analytics;
 
@@ -62,7 +61,8 @@ CREATE TABLE prod_tasty_bytes.raw_pos.country
    iso_currency VARCHAR(3),
    iso_country VARCHAR(2),
    city VARCHAR(16777216),
-   city_population VARCHAR(16777216)
+   city_population VARCHAR(16777216), 
+   city_id NUMBER(19,0)
 );
 
 
@@ -291,17 +291,17 @@ USE WAREHOUSE demo_build_wh;
 
 
 -- country table load
--- COPY INTO prod_tasty_bytes.raw_pos.country
--- (
---    country_id,
---    country,
---    iso_currency,
---    iso_country,
---    city_id,
---    city,
---    city_population
--- )
--- FROM @prod_tasty_bytes.public.s3load/raw_pos/country/;
+ COPY INTO prod_tasty_bytes.raw_pos.country
+ (
+    country_id,
+    country,
+    iso_currency,
+    iso_country,
+    city_id,
+    city,
+    city_population
+ )
+ FROM @prod_tasty_bytes.public.s3load/raw_pos/country/;
 
 
 -- franchise table load
