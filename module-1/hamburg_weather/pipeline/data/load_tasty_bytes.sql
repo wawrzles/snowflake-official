@@ -1,9 +1,7 @@
 USE ROLE accountadmin;
 
-
-/*--
-database, schema and warehouse creation
---*/
+--checks for existence
+drop database if exists prod_tasty_bytes;
 
 
 -- create tasty_bytes database
